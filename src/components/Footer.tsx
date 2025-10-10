@@ -1,30 +1,30 @@
-import { Heart, Instagram, Linkedin, Github, ArrowUp } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Heart, Instagram, Linkedin, Github, ArrowUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const quickLinks = [
-    { label: 'Home', href: 'home' },
-    { label: 'About', href: 'about' },
-    { label: 'Projects', href: 'projects' },
-    { label: 'Services', href: 'services' },
-    { label: 'Contact', href: 'contact' },
+    { label: "Home", href: "home" },
+    { label: "About", href: "about" },
+    { label: "Projects", href: "projects" },
+    { label: "Services", href: "services" },
+    { label: "Contact", href: "contact" },
   ];
 
   const socialLinks = [
-    { icon: Instagram, label: 'Instagram', href: '#' },
-    { icon: Github, label: 'GitHub', href: '#' },
-    { icon: Linkedin, label: 'LinkedIn', href: '#' },
+    { icon: Instagram, label: "Instagram", href: "#" },
+    { icon: Github, label: "GitHub", href: "#" },
+    { icon: Linkedin, label: "LinkedIn", href: "#" },
   ];
 
   return (
@@ -64,21 +64,18 @@ const Footer = () => {
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start gap-2">
                 <span className="text-primary">📧</span>
-                <a
-                  href="mailto:likhithamikkili3683@gmail.com"
-                  className="hover:text-primary transition-colors"
-                >
+                <a href="mailto:likhithamikkili3683@gmail.com" className="hover:text-primary transition-colors">
                   likhithamikkili3683@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary">🌐</span>
-                <span>Your City, Country</span>
+                <span>Guntur, A.P, India</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary">📞</span>
                 <a href="tel:+12345678900" className="hover:text-primary transition-colors">
-                  +1 (234) 567-8900
+                  +91 8555912198
                 </a>
               </li>
             </ul>
@@ -110,9 +107,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="pt-8 border-t border-border text-center">
           <p className="text-muted-foreground flex items-center justify-center gap-2 flex-wrap">
-            © 2025 Likhitha | Built with{' '}
-            <Heart className="w-4 h-4 fill-primary text-primary animate-pulse" /> using HTML, CSS, and
-            JavaScript
+            © 2025 Likhitha | Built with <Heart className="w-4 h-4 fill-primary text-primary animate-pulse" /> LOVE
           </p>
         </div>
       </div>
