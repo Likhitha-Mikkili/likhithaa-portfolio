@@ -2,11 +2,9 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import logo from '@/assets/logo.png';
-
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -14,82 +12,63 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#services', label: 'Services' },
-    { href: '#contact', label: 'Contact' },
-  ];
-
+  const navLinks = [{
+    href: '#home',
+    label: 'Home'
+  }, {
+    href: '#about',
+    label: 'About'
+  }, {
+    href: '#projects',
+    label: 'Projects'
+  }, {
+    href: '#services',
+    label: 'Services'
+  }, {
+    href: '#contact',
+    label: 'Contact'
+  }];
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
       setIsMobileMenuOpen(false);
     }
   };
-
-  return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-lg border-b border-border' : 'bg-transparent'
-      }`}
-    >
+  return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-lg border-b border-border' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <a href="#home" className="flex items-center gap-2" onClick={(e) => scrollToSection(e, '#home')}>
-            <img src={logo} alt="Likhitha Logo" className="w-10 h-10 object-contain" />
+          <a href="#home" className="flex items-center gap-2" onClick={e => scrollToSection(e, '#home')}>
+            <img src={logo} alt="Likhitha Logo" className="w-100 height-100 brightness-100 object-contain \n" />
             <span className="text-xl font-bold text-foreground">Likhitha</span>
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
-              >
+            {navLinks.map(link => <a key={link.href} href={link.href} onClick={e => scrollToSection(e, link.href)} className="text-foreground hover:text-primary transition-colors duration-200 font-medium">
                 {link.label}
-              </a>
-            ))}
+              </a>)}
             <ThemeToggle />
           </div>
 
           <div className="flex md:hidden items-center gap-2">
             <ThemeToggle />
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-foreground"
-              aria-label="Toggle menu"
-            >
+            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-foreground" aria-label="Toggle menu">
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </div>
 
-      {isMobileMenuOpen && (
-        <div className="md:hidden glass border-t border-border">
+      {isMobileMenuOpen && <div className="md:hidden glass border-t border-border">
           <div className="container mx-auto px-4 py-4 space-y-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="block text-foreground hover:text-primary transition-colors duration-200 font-medium"
-              >
+            {navLinks.map(link => <a key={link.href} href={link.href} onClick={e => scrollToSection(e, link.href)} className="block text-foreground hover:text-primary transition-colors duration-200 font-medium">
                 {link.label}
-              </a>
-            ))}
+              </a>)}
           </div>
-        </div>
-      )}
-    </nav>
-  );
+        </div>}
+    </nav>;
 };
-
 export default Navbar;
