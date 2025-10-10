@@ -35,10 +35,10 @@ const Hero = () => {
             <h1 className="text-6xl md:text-8xl font-bold gradient-text text-glow">
               Likhitha
             </h1>
-            <h2 className="text-2xl md:text-4xl font-semibold text-foreground/90">
+            <h2 className="text-2xl md:text-4xl font-semibold text-white">
               Web Designer
             </h2>
-            <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
               Crafting beautiful and functional websites with love
             </p>
           </div>
@@ -63,7 +63,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection('projects')}
-              className="glass border-2 border-primary/50 text-foreground glow-hover rounded-full px-8 py-6 text-lg font-semibold"
+              className="glass border-2 border-white/50 text-white hover:bg-white/10 glow-hover rounded-full px-8 py-6 text-lg font-semibold"
             >
               View Projects
             </Button>
@@ -73,7 +73,7 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ChevronDown className="w-8 h-8 text-foreground/50" />
+        <ChevronDown className="w-8 h-8 text-white/70" />
       </div>
     </section>
   );

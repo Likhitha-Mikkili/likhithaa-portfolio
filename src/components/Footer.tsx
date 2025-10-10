@@ -43,7 +43,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-6 gradient-text">Quick Links</h3>
+            <h3 className="text-xl font-bold mb-6 text-foreground">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
@@ -60,7 +60,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-bold mb-6 gradient-text">Contact Info</h3>
+            <h3 className="text-xl font-bold mb-6 text-foreground">Contact Info</h3>
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start gap-2">
                 <span className="text-primary">📧</span>
@@ -86,7 +86,7 @@ const Footer = () => {
 
           {/* Social Media */}
           <div>
-            <h3 className="text-xl font-bold mb-6 gradient-text">Social Media</h3>
+            <h3 className="text-xl font-bold mb-6 text-foreground">Social Media</h3>
             <div className="flex gap-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon;

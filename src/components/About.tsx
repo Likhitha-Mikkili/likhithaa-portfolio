@@ -67,12 +67,12 @@ const About = () => {
 
             {/* Skills Progress Bars */}
             <div className="space-y-4 pt-4">
-              <h3 className="text-xl font-semibold mb-4">My Skills</h3>
+              <h3 className="text-xl font-semibold mb-4 text-foreground">My Skills</h3>
               {skills.map((skill, index) => (
                 <div key={skill.name} className="space-y-2">
-                  <div className="flex justify-between text-sm font-medium">
+                  <div className="flex justify-between text-sm font-medium text-foreground">
                     <span>{skill.name}</span>
-                    <span className="text-primary">{skill.level}%</span>
+                    <span className="font-bold">{skill.level}%</span>
                   </div>
                   <div className="h-2 bg-muted rounded-full overflow-hidden">
                     <div

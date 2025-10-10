@@ -49,7 +49,7 @@ const Services = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold gradient-text">
+                  <h3 className="text-xl font-bold text-foreground">
                     {service.title}
                   </h3>
 

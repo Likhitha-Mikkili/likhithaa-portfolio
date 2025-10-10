@@ -114,7 +114,7 @@ const Contact = () => {
                       <Icon className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-1">{info.label}</h4>
+                      <h4 className="font-semibold mb-1 text-foreground">{info.label}</h4>
                       <p className="text-muted-foreground">{info.value}</p>
                     </div>
                   </div>
@@ -132,7 +132,7 @@ const Contact = () => {
 
             {/* Social Media */}
             <div>
-              <h3 className="text-xl font-bold mb-6 gradient-text">Follow Me</h3>
+              <h3 className="text-xl font-bold mb-6 text-foreground">Follow Me</h3>
               <div className="flex gap-4">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
