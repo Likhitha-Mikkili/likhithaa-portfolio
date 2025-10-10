@@ -42,7 +42,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <a href="#home" className="flex items-center gap-2" onClick={e => scrollToSection(e, '#home')}>
-            <img src={logo} alt="Likhitha Logo" className="w-30 height-30 brightness-100 object-contain shadow-amber-300 \n" />
+            <img src={logo} alt="Likhitha Logo" className="w-15 h-15" />
             <span className="text-xl font-bold text-foreground">Likhitha</span>
           </a>
 
