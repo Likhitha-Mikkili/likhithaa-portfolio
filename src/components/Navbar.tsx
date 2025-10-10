@@ -39,7 +39,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <a href="#home" className="text-2xl font-bold gradient-text" onClick={(e) => scrollToSection(e, '#home')}>
+          <a href="#home" className="text-2xl font-bold text-foreground" onClick={(e) => scrollToSection(e, '#home')}>
             Likhitha
           </a>
 
