@@ -1,57 +1,60 @@
-import { useState } from 'react';
-import { Send, Mail, MapPin, Phone, Instagram, Linkedin, Github } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent } from '@/components/ui/card';
-import { useToast } from '@/hooks/use-toast';
+import { useState } from "react";
+import { Send, Mail, MapPin, Phone, Instagram, Linkedin, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent } from "@/components/ui/card";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: 'Error',
-        description: 'Please fill in all fields',
-        variant: 'destructive',
+        title: "Error",
+        description: "Please fill in all fields",
+        variant: "destructive",
       });
       return;
     }
 
     toast({
-      title: 'Message Sent!',
-      description: 'Thank you for reaching out. I\'ll get back to you soon!',
+      title: "Message Sent!",
+      description: "Thank you for reaching out. I'll get back to you soon!",
     });
 
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: "", email: "", message: "" });
   };
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'likhithamikkili3683@gmail.com', href: 'mailto:likhithamikkili3683@gmail.com' },
-    { icon: MapPin, label: 'Location', value: 'Your City, Country', href: null },
-    { icon: Phone, label: 'Phone', value: '+1 (234) 567-8900', href: 'tel:+12345678900' },
+    {
+      icon: Mail,
+      label: "Email",
+      value: "likhithamikkili3683@gmail.com",
+      href: "mailto:likhithamikkili3683@gmail.com",
+    },
+    { icon: MapPin, label: "Location", value: "Your City, Country", href: null },
+    { icon: Phone, label: "Phone", value: "+91 8555912198", href: "tel:+8555912198" },
   ];
 
   const socialLinks = [
-    { icon: Instagram, label: 'Instagram', href: '#', color: 'hover:text-pink-500' },
-    { icon: Linkedin, label: 'LinkedIn', href: '#', color: 'hover:text-blue-500' },
-    { icon: Github, label: 'GitHub', href: '#', color: 'hover:text-purple-500' },
+    { icon: Instagram, label: "Instagram", href: "#", color: "hover:text-pink-500" },
+    { icon: Linkedin, label: "LinkedIn", href: "#", color: "hover:text-blue-500" },
+    { icon: Github, label: "GitHub", href: "#", color: "hover:text-purple-500" },
   ];
 
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">
-          Let's Work Together
-        </h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">Let's Work Together</h2>
         <p className="text-center text-muted-foreground mb-16 text-lg">
           Have a project in mind? I'd love to hear from you!
         </p>
