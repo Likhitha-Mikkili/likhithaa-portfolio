@@ -41,8 +41,8 @@ const Contact = () => {
       value: "likhithamikkili3683@gmail.com",
       href: "mailto:likhithamikkili3683@gmail.com",
     },
-    { icon: MapPin, label: "Location", value: "Your City, Country", href: null },
-    { icon: Phone, label: "Phone", value: "+91 8555912198", href: "tel:+8555912198" },
+    { icon: MapPin, label: "Location", value: "Guntur, India", href: Guntur, India },
+    { icon: Phone, label: "Phone", value: "+91 8555912198", href: "tel:+91 8555912198" },
   ];
 
   const socialLinks = [
