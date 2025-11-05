@@ -32,20 +32,20 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-4 animate-fadeUp">
-            <h1 className="text-6xl md:text-8xl font-bold text-white text-glow">
+            <h1 className="text-6xl md:text-8xl font-bold text-foreground text-glow">
               Likhitha
             </h1>
-            <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-white">
+            <h2 className="text-2xl md:text-4xl font-semibold text-foreground">
               Web Designer
             </h2>
-            <p className="text-lg md:text-xl text-gray-800 dark:text-white/90 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto">
               Crafting beautiful and functional websites with love
             </p>
           </div>
 
           {/* Typewriter Effect */}
           <div className="h-12 flex items-center justify-center animate-fadeIn" style={{ animationDelay: '0.5s' }}>
-            <div className="text-xl md:text-2xl font-medium text-gray-900 dark:text-white font-semibold">
+            <div className="text-xl md:text-2xl font-medium text-foreground font-semibold">
               {skills[currentSkill]}
             </div>
           </div>
@@ -63,7 +63,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection('projects')}
-              className="glass border-2 border-gray-900 dark:border-white/50 text-gray-900 dark:text-white hover:bg-gray-900/10 dark:hover:bg-white/10 glow-hover rounded-full px-8 py-6 text-lg font-semibold"
+              className="glass border-2 border-foreground/50 text-foreground hover:bg-foreground/10 glow-hover rounded-full px-8 py-6 text-lg font-semibold"
             >
               View Projects
             </Button>
@@ -73,7 +73,7 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ChevronDown className="w-8 h-8 text-gray-900 dark:text-white/70" />
+        <ChevronDown className="w-8 h-8 text-foreground/70" />
       </div>
     </section>
   );
