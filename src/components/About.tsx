@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Download } from 'lucide-react';
+import { Download, Code2, Palette, Smartphone, Layers, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profileImage from '@/assets/profile.jpg';
 
@@ -8,11 +8,11 @@ const About = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const skills = [
-    { name: 'HTML/CSS', level: 95 },
-    { name: 'JavaScript', level: 85 },
-    { name: 'React', level: 90 },
-    { name: 'UI/UX Design', level: 88 },
-    { name: 'Responsive Design', level: 92 },
+    { name: 'HTML/CSS', icon: Code2 },
+    { name: 'JavaScript', icon: Sparkles },
+    { name: 'React', icon: Layers },
+    { name: 'UI/UX Design', icon: Palette },
+    { name: 'Responsive Design', icon: Smartphone },
   ];
 
   useEffect(() => {
@@ -65,25 +65,26 @@ const About = () => {
               digital experiences that work seamlessly across all devices.
             </p>
 
-            {/* Skills Progress Bars */}
-            <div className="space-y-4 pt-4">
-              <h3 className="text-xl font-semibold mb-4 text-foreground">My Skills</h3>
-              {skills.map((skill, index) => (
-                <div key={skill.name} className="space-y-2">
-                  <div className="text-sm font-medium text-foreground">
-                    <span>{skill.name}</span>
-                  </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
+            {/* Skills Cards */}
+            <div className="pt-4">
+              <h3 className="text-xl font-semibold mb-6 text-foreground">My Skills</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {skills.map((skill, index) => {
+                  const Icon = skill.icon;
+                  return (
                     <div
-                      className="h-full bg-gradient-to-r from-primary to-secondary transition-all duration-1000 ease-out"
+                      key={skill.name}
+                      className="glass p-4 rounded-xl border border-primary/20 hover:border-primary/50 transition-all duration-300 hover-scale glow-hover text-center"
                       style={{
-                        width: isVisible ? `${skill.level}%` : '0%',
-                        transitionDelay: `${index * 100}ms`,
+                        animationDelay: `${index * 100}ms`,
                       }}
-                    />
-                  </div>
-                </div>
-              ))}
+                    >
+                      <Icon className="w-8 h-8 mx-auto mb-3 text-primary" />
+                      <p className="text-sm font-medium text-foreground">{skill.name}</p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
             <Button
