@@ -10,19 +10,25 @@ const Testimonials = () => {
     {
       name: 'Sarah Johnson',
       role: 'CEO, TechStart',
-      text: 'Likhitha transformed our brand\'s online presence beautifully. Her attention to detail and creative vision exceeded our expectations.',
+      text: 'Likhitha created an amazing website for us that perfectly represents our brand. Her design skills and attention to detail are exceptional!',
       rating: 5,
     },
     {
       name: 'Michael Chen',
-      role: 'Marketing Director',
-      text: 'Working with Likhitha was a pleasure. She delivered a stunning, responsive website that perfectly captured our brand identity.',
+      role: 'Marketing Director, BrandCo',
+      text: 'The AI-generated videos and images Likhitha produced for our campaign were stunning. She truly understands how to leverage AI tools creatively.',
       rating: 5,
     },
     {
       name: 'Emily Rodriguez',
       role: 'Founder, GlowSkin',
-      text: 'The landing page Likhitha designed for us is absolutely gorgeous! Our conversion rate increased by 40% after launch.',
+      text: 'The landing page Likhitha designed increased our conversion rate by 40%! Her design is modern, clean, and highly effective.',
+      rating: 5,
+    },
+    {
+      name: 'David Park',
+      role: 'CMO, DigitalEdge',
+      text: 'Our brand advertising campaign came alive with the videos and photos Likhitha created. Outstanding quality and creativity!',
       rating: 5,
     },
   ];
