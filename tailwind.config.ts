@@ -64,7 +64,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
         inter: ['Inter', 'sans-serif'],
       },
       keyframes: {
