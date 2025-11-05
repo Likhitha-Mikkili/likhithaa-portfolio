@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Download, Code2, Palette, Smartphone, Layers, Sparkles } from 'lucide-react';
+import { Download, Code2, Palette, Smartphone, Layers, Sparkles, Brain, Zap, Wand2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profileImage from '@/assets/profile.jpg';
 
@@ -13,6 +13,9 @@ const About = () => {
     { name: 'React', icon: Layers },
     { name: 'UI/UX Design', icon: Palette },
     { name: 'Responsive Design', icon: Smartphone },
+    { name: 'AI Tools', icon: Brain },
+    { name: 'ChatGPT', icon: Wand2 },
+    { name: 'AI Prompt Design', icon: Zap },
   ];
 
   useEffect(() => {
