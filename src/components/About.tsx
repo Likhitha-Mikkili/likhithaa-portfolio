@@ -14,8 +14,6 @@ const About = () => {
     { name: 'UI/UX Design', icon: Palette },
     { name: 'Responsive Design', icon: Smartphone },
     { name: 'AI Tools', icon: Brain },
-    { name: 'ChatGPT', icon: Wand2 },
-    { name: 'AI Prompt Design', icon: Zap },
   ];
 
   useEffect(() => {
