@@ -53,13 +53,20 @@ const Projects = () => {
           <div className="relative overflow-hidden">
             <Card className="gradient-border glass overflow-hidden group">
               <CardContent className="p-0">
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden h-[400px]">
                   <img
                     src={projects[currentProject].image}
                     alt={projects[currentProject].title}
-                    className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-75"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  
+                  {/* Overlay with details */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                    <div className="text-center space-y-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                      <h4 className="text-3xl font-bold gradient-text">View Project</h4>
+                      <p className="text-muted-foreground px-8">Hover to explore details</p>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="p-8 space-y-4">

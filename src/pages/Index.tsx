@@ -9,10 +9,11 @@ import Services from '@/components/Services';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import InteractiveGrid from '@/components/InteractiveGrid';
 
 const Index = () => {
   useEffect(() => {
-    // Smooth scroll behavior
+    // Smooth scroll with easing
     document.documentElement.style.scrollBehavior = 'smooth';
 
     // Intersection Observer for fade-in animations
@@ -38,6 +39,7 @@ const Index = () => {
 
   return (
     <>
+      <InteractiveGrid />
       <Preloader />
       <ScrollProgress />
       <Navbar />

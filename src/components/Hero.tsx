@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import MagneticButton from '@/components/MagneticButton';
 
 const Hero = () => {
   const [currentSkill, setCurrentSkill] = useState(0);
@@ -72,22 +73,26 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button
-                size="lg"
-                onClick={() => scrollToSection('contact')}
-                className="group relative overflow-hidden bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground rounded-full px-8 h-14 text-lg font-semibold shadow-lg hover:shadow-2xl transition-all duration-300"
-              >
-                <span className="relative z-10">Let's Collaborate</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => scrollToSection('projects')}
-                className="border-2 border-primary/50 hover:border-primary text-foreground hover:bg-primary/10 rounded-full px-8 h-14 text-lg font-semibold transition-all duration-300"
-              >
-                View Portfolio
-              </Button>
+              <MagneticButton>
+                <Button
+                  size="lg"
+                  onClick={() => scrollToSection('contact')}
+                  className="group relative overflow-hidden bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-primary-foreground rounded-full px-8 h-14 text-lg font-semibold shadow-lg hover:shadow-2xl transition-all duration-300"
+                >
+                  <span className="relative z-10">Let's Collaborate</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </Button>
+              </MagneticButton>
+              <MagneticButton>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={() => scrollToSection('projects')}
+                  className="border-2 border-primary/50 hover:border-primary text-foreground hover:bg-primary/10 rounded-full px-8 h-14 text-lg font-semibold transition-all duration-300"
+                >
+                  View Portfolio
+                </Button>
+              </MagneticButton>
             </div>
           </div>
 
