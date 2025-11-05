@@ -107,17 +107,17 @@ const Hero = () => {
               {/* Floating Icons */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-full h-full">
-                  <div className="absolute top-1/4 left-1/4 p-4 rounded-2xl glass glow-hover animate-float">
-                    <div className="text-3xl">🎨</div>
+                  <div className="absolute top-1/4 left-1/4 p-6 rounded-2xl glass glow-hover animate-float">
+                    <div className="text-6xl">🎨</div>
                   </div>
-                  <div className="absolute top-1/3 right-1/4 p-4 rounded-2xl glass glow-hover animate-float" style={{ animationDelay: '1s' }}>
-                    <div className="text-3xl">🤖</div>
+                  <div className="absolute top-1/3 right-1/4 p-6 rounded-2xl glass glow-hover animate-float" style={{ animationDelay: '1s' }}>
+                    <div className="text-6xl">🤖</div>
                   </div>
-                  <div className="absolute bottom-1/3 left-1/3 p-4 rounded-2xl glass glow-hover animate-float" style={{ animationDelay: '2s' }}>
-                    <div className="text-3xl">📱</div>
+                  <div className="absolute bottom-1/3 left-1/3 p-6 rounded-2xl glass glow-hover animate-float" style={{ animationDelay: '2s' }}>
+                    <div className="text-6xl">📱</div>
                   </div>
-                  <div className="absolute bottom-1/4 right-1/3 p-4 rounded-2xl glass glow-hover animate-float" style={{ animationDelay: '0.5s' }}>
-                    <div className="text-3xl">🎬</div>
+                  <div className="absolute bottom-1/4 right-1/3 p-6 rounded-2xl glass glow-hover animate-float" style={{ animationDelay: '0.5s' }}>
+                    <div className="text-6xl">🎬</div>
                   </div>
                 </div>
               </div>
