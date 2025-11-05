@@ -33,13 +33,13 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-4 animate-fadeUp">
             <h1 className="text-6xl md:text-8xl font-bold text-foreground text-glow">
-              Likhitha
+              Likhitha Portfolio
             </h1>
             <h2 className="text-2xl md:text-4xl font-semibold text-foreground">
-              Web Designer
+              Best Creative Design
             </h2>
             <p className="text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto">
-              Crafting beautiful and functional websites with love
+              Transforming ideas into stunning visual experiences
             </p>
           </div>
 
