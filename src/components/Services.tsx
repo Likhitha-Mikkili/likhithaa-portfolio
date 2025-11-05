@@ -1,27 +1,27 @@
-import { Palette, Layout, Smartphone, Sparkles } from 'lucide-react';
+import { Globe, Wand2, Layout, Video } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Services = () => {
   const services = [
     {
-      icon: Palette,
-      title: 'Web Design',
-      description: 'Creating stunning, user-friendly designs that capture your brand essence.',
+      icon: Globe,
+      title: 'Websites',
+      description: 'Building beautiful, responsive websites that deliver exceptional user experiences.',
     },
     {
-      icon: Smartphone,
-      title: 'Responsive Websites',
-      description: 'Building websites that look perfect on all devices and screen sizes.',
+      icon: Wand2,
+      title: 'AI Videos & Images',
+      description: 'Creating stunning AI-generated videos and images using cutting-edge tools.',
     },
     {
       icon: Layout,
-      title: 'UI/UX Prototyping',
-      description: 'Designing intuitive interfaces with focus on user experience and usability.',
-    },
-    {
-      icon: Sparkles,
       title: 'Landing Page Design',
       description: 'Crafting high-converting landing pages with modern animations and effects.',
+    },
+    {
+      icon: Video,
+      title: 'Brand Advertising',
+      description: 'Designing captivating advertising videos and photos that elevate your brand.',
     },
   ];
 
