@@ -77,12 +77,15 @@ const Projects = () => {
                     {projects[currentProject].description}
                   </p>
 
-                  <div className="flex gap-4 pt-4">
+                  <div className="flex gap-4 pt-4 relative z-10">
                     <a 
                       href={projects[currentProject].liveUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground glow-hover px-6 py-3 text-sm font-medium transition-colors hover:opacity-90"
+                      className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground glow-hover px-6 py-3 text-sm font-medium transition-colors hover:opacity-90 cursor-pointer"
+                      onClick={(e) => {
+                        console.log('Live URL clicked:', projects[currentProject].liveUrl);
+                      }}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
                       View Live
@@ -91,7 +94,10 @@ const Projects = () => {
                       href={projects[currentProject].githubUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-full glass border border-primary/50 glow-hover px-6 py-3 text-sm font-medium transition-colors hover:bg-accent"
+                      className="inline-flex items-center justify-center rounded-full glass border border-primary/50 glow-hover px-6 py-3 text-sm font-medium transition-colors hover:bg-accent cursor-pointer"
+                      onClick={(e) => {
+                        console.log('GitHub URL clicked:', projects[currentProject].githubUrl);
+                      }}
                     >
                       <Github className="mr-2 h-4 w-4" />
                       GitHub
