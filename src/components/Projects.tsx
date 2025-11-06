@@ -78,26 +78,24 @@ const Projects = () => {
                   </p>
 
                   <div className="flex gap-4 pt-4">
-                    <Button
-                      variant="default"
-                      className="bg-gradient-to-r from-primary to-secondary text-primary-foreground glow-hover rounded-full"
-                      asChild
+                    <a 
+                      href={projects[currentProject].liveUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground glow-hover px-6 py-3 text-sm font-medium transition-colors hover:opacity-90"
                     >
-                      <a href={projects[currentProject].liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        View Live
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="glass border-primary/50 glow-hover rounded-full"
-                      asChild
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      View Live
+                    </a>
+                    <a 
+                      href={projects[currentProject].githubUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center rounded-full glass border border-primary/50 glow-hover px-6 py-3 text-sm font-medium transition-colors hover:bg-accent"
                     >
-                      <a href={projects[currentProject].githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="mr-2 h-4 w-4" />
-                        GitHub
-                      </a>
-                    </Button>
+                      <Github className="mr-2 h-4 w-4" />
+                      GitHub
+                    </a>
                   </div>
                 </div>
               </CardContent>
