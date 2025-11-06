@@ -11,25 +11,25 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Glowify Landing Page',
-      description: 'A modern, glowing landing page for a skincare brand using gradient themes and smooth animations.',
+      title: 'Nakshathra Traditional Wear',
+      description: 'An elegant e-commerce platform showcasing traditional ethnic wear with modern shopping experience.',
       image: project1,
-      liveUrl: '#',
-      githubUrl: '#',
+      liveUrl: 'https://nakshakthra.myshopify.com/',
+      githubUrl: 'https://github.com/Likhitha-Mikkili',
     },
     {
-      title: 'ShopEase E-Commerce Website',
-      description: 'A fully responsive shopping website with cart system, filters, and modern product layout.',
+      title: 'Ala by Shirin',
+      description: 'A sophisticated clothing website featuring contemporary fashion collections with seamless user experience.',
       image: project2,
-      liveUrl: '#',
-      githubUrl: '#',
+      liveUrl: 'https://ala-by-shirin.vercel.app/',
+      githubUrl: 'https://github.com/Likhitha-Mikkili',
     },
     {
-      title: 'Portify Personal Portfolio',
-      description: 'A premium personal portfolio template showcasing interactive design and creative motion.',
+      title: 'Likhitha Jewel Suite',
+      description: 'A premium jewelry showcase website with elegant design and interactive product galleries.',
       image: project3,
-      liveUrl: '#',
-      githubUrl: '#',
+      liveUrl: 'https://likhitha-jewel-suite.vercel.app/',
+      githubUrl: 'https://github.com/Likhitha-Mikkili',
     },
   ];
 

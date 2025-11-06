@@ -22,9 +22,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, label: "Instagram", href: "#" },
-    { icon: Github, label: "GitHub", href: "#" },
-    { icon: Linkedin, label: "LinkedIn", href: "#" },
+    { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/olive_webdesigner?igsh=ZnJ4eXlqdHJ0bGE1" },
+    { icon: Github, label: "GitHub", href: "https://github.com/Likhitha-Mikkili" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/mikkili-likhitha-0694842a8" },
   ];
 
   return (

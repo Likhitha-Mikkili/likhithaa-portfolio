@@ -46,9 +46,9 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, label: "Instagram", href: "#", color: "hover:text-pink-500" },
-    { icon: Linkedin, label: "LinkedIn", href: "#", color: "hover:text-blue-500" },
-    { icon: Github, label: "GitHub", href: "#", color: "hover:text-purple-500" },
+    { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/olive_webdesigner?igsh=ZnJ4eXlqdHJ0bGE1", color: "hover:text-pink-500" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/mikkili-likhitha-0694842a8", color: "hover:text-blue-500" },
+    { icon: Github, label: "GitHub", href: "https://github.com/Likhitha-Mikkili", color: "hover:text-purple-500" },
   ];
 
   return (
