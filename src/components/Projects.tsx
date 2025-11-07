@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -8,6 +8,7 @@ import project3 from '@/assets/project3.jpg';
 
 const Projects = () => {
   const [currentProject, setCurrentProject] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   const projects = [
     {
@@ -41,6 +42,16 @@ const Projects = () => {
     setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length);
   };
 
+  useEffect(() => {
+    if (!isHovered) {
+      const interval = setInterval(() => {
+        nextProject();
+      }, 5000);
+
+      return () => clearInterval(interval);
+    }
+  }, [currentProject, isHovered]);
+
   return (
     <section id="projects" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -50,7 +61,11 @@ const Projects = () => {
 
         <div className="max-w-5xl mx-auto relative">
           {/* Main Project Display */}
-          <div className="relative overflow-hidden">
+          <div 
+            className="relative overflow-hidden"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <Card className="gradient-border glass overflow-hidden group">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden h-[400px]">
